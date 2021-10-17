@@ -31,8 +31,8 @@ int Integer::fib(){
 
 int Integer::fibCalc(int x){
 	if (x <= 1)
-        return nx
-    return fib(x-1) + fib(x-2);
+        return x;
+    return fibCalc(x-1) + fibCalc(x-2);
 	}
 
 
@@ -46,5 +46,5 @@ extern "C"{
 			integer = nullptr;
 			}
 		}
-	int Integer_fib() {return integer->fib();}
+	int Integer_fib(Integer* integer) {return integer->fib();}
 	}
