@@ -34,7 +34,8 @@ def part1(n):
     ax.set_aspect('equal')
     ax.scatter(insideX, insideY, color='g',edgecolor=None)
     ax.scatter(outsideX, outsideY, color='r',edgecolor=None)
-    plt.show()
+    #plt.show()
+    plt.savefig('part1.png')
     
 def main(args):
     print("Part1 Program is running for n="+str(args[1]))
