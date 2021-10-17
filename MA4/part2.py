@@ -1,8 +1,6 @@
 import sys
 import random
 import math
-import numpy as np
-import matplotlib.pyplot as plt
 from functools import reduce
 from time import perf_counter
 
