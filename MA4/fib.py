@@ -63,6 +63,8 @@ def drawCpp():
 def main():
     drawPython()
     drawCpp()
+    execute_cpp(47)
 
 if __name__ == '__main__':
 	main()
+
