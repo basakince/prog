@@ -7,6 +7,7 @@ class Integer{
 		int get();
 		void set(int);
 		int fib();
+		int fibCalc(int);
 	private:
 		int val;
 	};
@@ -24,9 +25,14 @@ void Integer::set(int n){
 	}
 
 int Integer::fib(){
-	if (val <= 1)
-        return val;
-    return fib(val-1) + fib(val-2);
+	return fibCalc(val);
+
+}
+
+int Integer::fibCalc(int x){
+	if (x <= 1)
+        return nx
+    return fib(x-1) + fib(x-2);
 	}
 
 
@@ -40,5 +46,5 @@ extern "C"{
 			integer = nullptr;
 			}
 		}
-	int Integer_fib(Integer* integer) {return integer->fib();}
+	int Integer_fib() {return integer->fib();}
 	}
