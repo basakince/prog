@@ -24,9 +24,13 @@ def part2(n,d):
             inCircle += 1
             #insideX.append(coordX)
         total+=1
-    result = (math.pow( (4 * inCircle) / total ,(d/2)) * math.pow(1,d)) / (math.gamma((d/2)+1))
+    #calculate based on volume????
+    result = math.pow(2, d)*inCircle / total 
+    #calculate it for actual pi
+    result_actual = (math.pow( (math.pi) ,(d/2)) * math.pow(1,d)) / (math.gamma((d/2)+1))
     print("inside the circle=",inCircle)
     print("approximation=",result)
+    print(result_actual)
     
 def main(args):
     time_start = perf_counter()

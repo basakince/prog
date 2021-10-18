@@ -38,6 +38,7 @@ def main(args):
     dimension = int(args[2])
     noProcesses = int(args[3])
     result = []
+    d = 11
     #process: aynı anda calısacak ıslem sayısı
     print("Part3 Program is running for n=",n," d=",dimension," process=",noProcesses)
     #part2(int(args[1]),int(args[2]))
@@ -54,11 +55,13 @@ def main(args):
     #[38,41,55,x...]
     totalInCircle = reduce((lambda x, y: x + y), result)
     #print(list(result))
-    approx = (math.pow( (4 * totalInCircle) / n ,(dimension/2)) * math.pow(1,dimension)) / (math.gamma((dimension/2)+1))
+    approx = math.pow(2, d)*totalInCircle / n
+    result_actual = (math.pow( (math.pi) ,(d/2)) * math.pow(1,d)) / (math.gamma((d/2)+1))
     print("inside the circle=",totalInCircle)
     print("approximate=",approx)
     time_stop = perf_counter()
     print("Elapsed time:",  time_stop-time_start, "seconds")
+    print(result_actual)
 
 
 if __name__ == "__main__":
